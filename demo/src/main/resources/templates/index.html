@@ -28,10 +28,11 @@
           <thead>
             <tr>
               <th style="width: 10%">ID</th>
-              <th style="width: 30%">商品名</th>
+              <th style="width: 20%">商品名</th>
               <th style="width: 10%">価格</th>
               <th style="width: 20%">ベンダー</th>
-              <th style="width: 30%"></th>
+              <th style="width: 20%">カテゴリ</th>
+              <th style="width: 20%"></th>
             </tr>
           </thead>
           <tbody>
@@ -40,6 +41,7 @@
               <td th:text="*{name}"></td>
               <td th:text="*{price}"></td>
               <td th:text="*{vendor}"></td>
+              <td th:text="*{category}"></td>
               <td class="float-right">
                 <!--
                   <form th:action="@{/items/{id}(id=*{id})}" th:method="delete">

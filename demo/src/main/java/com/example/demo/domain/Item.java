@@ -18,6 +18,10 @@ public class Item {
   @Size(max=50, message="ベーダー名は50文字を超えないでください。")
   private String vendor;
 
+  private String category;
+
+
+
   public Long getId() {
     return id;
   }
@@ -49,4 +53,15 @@ public class Item {
   public void setVendor(String vendor) {
     this.vendor = vendor;
   }
+
+  public String getCategory() {
+	    return category;
+  }
+
+  public void setCategory(String category) {
+    this.category = category;
+  }
+
+
+
 }

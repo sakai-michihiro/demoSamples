@@ -2,7 +2,16 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.mapper.ItemMapper">
   <select id="findAll" resultType="com.example.demo.domain.Item">
-    select * from item
+	select
+	  a.id
+	  ,a.name
+	  ,a.price
+	  ,a.vendor
+	  ,b.category
+	from
+	  item a 
+	  left join item_category b 
+	    on a.category_id = b.id
   </select>
 
   <select id="findOne" resultType="com.example.demo.domain.Item">
